@@ -4,9 +4,20 @@
     box-sizing: border-box;
 }
 
+
 body {
     background: linear-gradient(to bottom right, #060606, #242525, #343534);
     font-family: Arial, sans-serif;
+
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contenido-principal {
+    flex-grow: 1;
+    width: 100%;
 }
 
 .cabecera {
@@ -50,8 +61,7 @@ body {
 
     grid-template-areas:
         "titulo titulo titulo"
-        "marca juegos registrarte"
-        "footer footer footer";
+        "marca juegos registrarte";
 
 }
 
@@ -136,24 +146,53 @@ body {
 }
 
 
+
+
 .footer {
-    grid-area: footer;
-    background-color: #222;
+    background-color: #1a1a1a;
     color: white;
-    padding: 20px;
+    padding: 25px 0 20px 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 5px solid;
+    border-image: linear-gradient(to right, #43e97b, #38f9d7, #9732d8) 1;
+    border-image-slice: 1;
+}
+
+.footer p {
     text-align: center;
+    margin: 0 5px 5px;
+    padding: 0;
+    font-size: 0.9em;
 }
 
 .redes {
-    padding: 10px;
+    padding: 5px 0 0;
     text-align: center;
-    margin: 15px;
+    margin: 0;
 }
 
 .redes a {
     color: white;
     margin: 0 10px;
     font-size: 1.3em;
+    transition: color 0.3s;
+}
+
+.redes a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.3em;
+    transition: color 0.3s;
+}
+
+.redes a:hover {
+    color: #43e97b;
 }
 
 
@@ -167,10 +206,4 @@ p {
     padding: 0px;
     margin: 10px;
     text-align: justify;
-}
-
-#pie {
-    text-align: center;
-    margin: 10px;
-    padding: 1.5px;
 }
